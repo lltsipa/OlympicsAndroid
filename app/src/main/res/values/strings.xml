@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">OlympicsApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_view__players">View_Players</string>
+</resources>
