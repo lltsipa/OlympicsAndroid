@@ -97,7 +97,7 @@ public class Add_Player_View extends Activity {
 
                 if(playerExist == null){
 
-                    Toast.makeText(getApplicationContext(), playerExist,
+                    Toast.makeText(getApplicationContext(), "Successfully added a new player",
                             Toast.LENGTH_LONG).show();
 
                     Intent i = new Intent(Add_Player_View.this, View_Players.class);
