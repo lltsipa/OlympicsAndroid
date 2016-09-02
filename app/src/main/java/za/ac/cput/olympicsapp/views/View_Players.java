@@ -48,7 +48,7 @@ public class View_Players extends Activity {
                 stringPlayerList = new ArrayList<>();
 
                 for(Player player: playerList){
-                    stringPlayerList.add(player.getId() +"  "+ player.getPlayerName() +"  "+ player.getPlayerSurname()+"\n"+player.getPlayerAge());
+                    stringPlayerList.add(player.getId() +" \nName: "+ player.getPlayerName() +" \nSurname: "+ player.getPlayerSurname()+"\nAge: "+player.getPlayerAge());
                 }
             }
         });
@@ -85,57 +85,5 @@ public class View_Players extends Activity {
             }
         });
 
-//        listViewPlayers.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-//            @Override
-//            public boolean onItemLongClick(AdapterView<?> parent, final View view, final int position, long id) {
-//                AlertDialog.Builder adb = new AlertDialog.Builder(View_Players.this);
-//                adb.setTitle("Edit?");
-//                adb.setMessage("Are you sure you want to delete player?");
-//                final int positionToRemove = position;
-//                adb.setNegativeButton("No", null);
-//                adb.setPositiveButton("Yes", new AlertDialog.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        TextView text = (TextView)view;
-//                        String id = text.getText().toString().substring(0, text.getText().toString().indexOf(" "));
-//                        final Long playerId = Long.parseLong(id);
-//
-//                        Thread thread = new Thread(new Runnable() {
-//                            @Override
-//                            public void run() {
-//                                PlayerService service = new PlayerServiceImpl();
-//                                playerList = service.getAllPlayers();
-//
-//                                for(Player p : playerList)
-//                                {
-//                                    if(p.getId() == playerId){
-//                                         service.removePlayer(p);
-//
-//                                        break;
-//                                    }
-//
-//                                }
-//
-//
-//                            }
-//                        });
-//
-//                        thread.start();
-//
-//                        try{
-//                            thread.join();
-//                        }catch (InterruptedException e){
-//                            e.printStackTrace();
-//                        }
-//
-//                        stringPlayerList.remove(position);
-//
-//                        adapter.notifyDataSetChanged();
-//
-//                    }
-//                });
-//                adb.show();
-//                return true;
-//            }
-//        });
     }
 }

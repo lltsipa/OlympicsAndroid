@@ -83,7 +83,7 @@
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edit"
+                    android:text="Save"
                     android:id="@+id/btnEdit"
                     android:layout_gravity="center_horizontal"
                     android:textColor="@android:color/black"
